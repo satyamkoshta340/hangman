@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    /* background-color: rgb(34, 36, 37); */
+    /* color: azure */
+    /* background-color: rgb(140, 255, 255); */
+}
+body{
+    overflow: hidden;
+    background-color: rgba(185, 189, 183, 0.911);
+} 
+
+.keyboard{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: 700px;
+    min-height: 200px;
+    flex-wrap: wrap;
+    margin: auto;
+    border: 2px solid black;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #0004;
+}
+
+.key{
+    /* font-size: 1.5rem; */
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+    /* margin-top: 1rem; */
+    background: linear-gradient(180deg, rgb(66, 66, 66), rgb(34, 34, 34));
+    box-sizing: border-box;
+    border-radius: 5px; 
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.25),
+    0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.key-inner{
+    color: azure;
+    position: absolute;
+    top:2px;
+    left: 3px;
+    bottom: 7px;
+    right: 6px;
+    background: linear-gradient(90deg, rgba(240, 255, 255, 0), rgba(245, 245, 245, 0.158));
+    border-radius: 5px;
+    box-shadow: -10px -10px 10px rgba(255,255,255, 0.25), 
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid #0004;
+    border-top: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    overflow: hidden;
+    text-align: start;
+    padding-left: 5px;
+}
+
+.active-key{
+    animation: pressed 0.3s ease-in-out;
+}
+
+@keyframes pressed {
+    50%{
+        right: 8px;
+        bottom: 10px;
+        top: 4px;
+        left: 5px;
+    }
+    100%{
+        right: 6px;
+        bottom: 7px;
+        top: 2px;
+        left: 3px;
+    }
+}
+
+#content{
+    width: 100hh;
+    min-height: 25rem;
+    background-color: #0004;
+    border-radius: 25px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    margin: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.hangman-base{
+    width: 20rem;
+    height: 22rem;
+    border: 5px solid black;
+    position: relative;
+    /* border-right: none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.noose{
+    height: 2.5rem;
+    width: 5px;
+    background-color: black;
+    /* position: absolute; */
+    /* left: 50%; */
+}
+
+.hangman-head{
+    /* position: absolute; */
+    height: 4rem;
+    width: 4rem;
+    border: 5px solid black;
+    border-radius: 50%;
+    left: 8rem;
+    top: 2.5rem;
+    display: none;
+}
+.valley{
+    height: 6rem;
+    width: 5px;
+    background-color: black;
+    display: none;
+}
+.left-hand{
+    display: none;
+    height: 5rem;
+    width: 5px;
+    background-color: black;
+    position: absolute;
+    top: 7.6rem;
+    /* -ms-transform: rotate(45deg); */
+    transform: rotate(45deg) translateX(-2rem);
+}
+.right-hand{
+    display: none;
+    height: 5rem;
+    width: 5px;
+    background-color: black;
+    position: absolute;
+    top: 7.6rem;
+    /* -ms-transform: rotate(45deg); */
+    transform: rotate(-45deg) translateX(2rem);
+}
+.left-leg{
+    display: none;
+    height: 5rem;
+    width: 5px;
+    background-color: black;
+    position: absolute;
+    top: 13.8rem;
+    /* -ms-transform: rotate(45deg); */
+    transform: rotate(40deg) translateX(-2rem);
+}
+.right-leg{
+    display: none;
+    height: 5rem;
+    width: 5px;
+    background-color: black;
+    position: absolute;
+    top: 13.8rem;
+    transform: rotate(-40deg) translateX(2rem);
+}
+
+.word-space{
+    width:28rem;
+    height: 4rem;
+    border: 5px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.word-space div{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-bottom: 3px solid black;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+#App{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    font-size: 3rem;
+    padding-top: 1rem;
+    font-weight: 700;
+}

@@ -1,0 +1,202 @@
+// .hangman-container{
+//     position: relative;
+//     box-sizing: border-box;
+//     height: 100vh;
+// }
+
+// .pole{
+//     position: absolute;
+//     height: 35rem;
+//     width: 7rem;
+//     // background: $dark-blue;
+//     margin-left: 3rem;
+//     bottom: 0;
+//     border-top: 10px solid $dark-blue;
+//     border-left: 10px solid $dark-blue;
+
+//     &::after{
+//         content: "";
+//         height: 5rem;
+//         width: 10px;
+//         background: $dark-blue;
+//         position: absolute;
+//         right: 0;
+//     }
+// }
+
+// .hangman{
+//     position: relative;
+//     background: $grey;
+
+//     &__element{
+//         opacity: 0.25;
+
+//         &:nth-child(1){
+//             position: absolute;
+//             height: 5rem;
+//             width: 5rem;
+//             border: 5px solid $dark-blue;
+//             border-radius: 50%;
+//         }
+
+//         &:not(:first-child){
+//             background: black;
+//             position: absolute;
+//         }
+
+//         &:nth-child(2){
+//             height: 15rem;
+//             width: 5px;
+//             left: 2.5rem
+//         }
+
+//         &:nth-child(3){
+//             height: 5rem;
+//             width: 5px;
+//             top: 7rem;
+//             left: 0.7rem;
+//             transform: rotate(45deg);
+//         }
+//         &:nth-child(4){
+//             height: 5rem;
+//             width: 5px;
+//             top: 7rem;
+//             right: 1rem;
+//             transform: rotate(-45deg);
+//         }
+//         &:nth-child(5){
+//             height: 5rem;
+//             width: 5px;
+//             top: 19.5rem;
+//             left: 0.7rem;
+//             transform: rotate(45deg);
+//         }
+//         &:nth-child(6){
+//             height: 5rem;
+//             width: 5px;
+//             top: 19.5rem;
+//             right: 1rem;
+//             transform: rotate(-45deg);
+//         }
+//     }
+// }
+
+
+.hangman-container {
+    position: relative;
+    padding-left: 10rem;
+    padding-top: 8rem;
+    box-sizing: border-box;
+    height: 100vh;
+    // min-width: 25rem;
+    width: 100%;
+  }
+  
+  .pole {
+    position: absolute;
+    height: 650px;
+    top: 2.7rem;
+    left: 3rem;
+    border-left: 10px solid $dark-blue;
+    border-top: 10px solid $dark-blue;
+    width: 10.2rem;
+    // z-index: -1;
+    
+    &::after {
+      content: "";
+      height: 5rem;
+      width: 10px;
+      background: $dark-blue;
+      position: absolute;
+      right: 0;
+    }
+  }
+  
+  .hangman {
+    position: relative;
+    
+    &__element { 
+       opacity: 0.25;
+      
+      &:nth-child(1) {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 10px solid black;
+      }
+      
+      &:not(:first-child) {
+        height: 100px;
+        width: 10px;
+        background: black;
+      }
+      
+      &:nth-child(2) {
+        position: absolute;
+        height: 300px;
+        left: 55px;
+      }
+      
+      &:nth-child(3) {
+        position: absolute;
+        transform: rotate(45deg);
+        top: 150px;
+        left: 20px;
+      }
+      
+      &:nth-child(4) {
+        position: absolute;
+        transform: rotate(-45deg);
+        top: 150px;
+        left: 90px;
+      }
+      
+       &:nth-child(5) {
+        position: absolute;
+        transform: rotate(45deg);
+        top: 400px;
+        left: 20px;
+      }
+      
+      &:nth-child(6) {
+        position: absolute;
+        transform: rotate(-45deg);
+        top: 400px;
+        left: 90px;
+      }
+    }
+  }
+  
+  @for $i from 1 through 6 {
+    .hangman-#{$i} {
+      @for $j from 1 through $i {
+        .hangman__element:nth-child(#{$j}) {
+          opacity: 1;
+        }
+      }
+  
+      @if $i == 6 {
+        .hangman__element:nth-child(1) {
+          &::after {
+            content: "✖   ✖";
+            font-size: 2rem;
+            color: black;
+            position: absolute;
+            left: 1.7rem;
+            top: 2.3rem;
+          }
+          
+          &::before {
+            content: "(";
+            font-size: 3rem;
+            position: absolute;
+            font-family: sans-serif;
+            transform: rotate(90deg);
+            font-weight: bold;
+            top: 60px;
+            left: 55px;
+          }
+        }
+      }
+    }
+  }

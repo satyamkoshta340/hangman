@@ -1,0 +1,27 @@
+{
+  "name": "react_hangman",
+  "version": "1.0.0",
+  "description": "hangman game developed using react build from scratch",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "windtalker",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "node-sass": "^7.0.1",
+    "nvm": "^0.0.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.67.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
+  }
+}

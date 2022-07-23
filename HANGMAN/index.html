@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script defer  src="./script.js" type="text/javascript"></script>
+    <link href="./style.css" rel="stylesheet">
+    <title>Hangman</title>
+</head>
+<body>
+    <div id="App">
+        Hangmans
+    </div>
+    <div id="content">
+        <div class="hangman-base">
+            <div class="noose"></div>
+            <div class="hangman-head"></div>
+            <div class="valley"></div>
+            <div class="left-hand"></div>
+            <div class="right-hand"></div>
+            <div class="left-leg"></div>
+            <div class="right-leg"></div>
+        </div>
+        <div class="word-space" id="word-space"></div>
+    </div>
+    <div class="keyboard">
+        <button class="key" onclick= "clicked('a')"> <div class="key-inner a">A</div></button>
+        <button class="key" onclick= "clicked('b')"> <div class="key-inner b">B</div></button>
+        <button class="key" onclick= "clicked('c')"> <div class="key-inner c">C</div></button>
+        <button class="key" onclick= "clicked('d')"> <div class="key-inner d">D</div></button>
+        <button class="key" onclick= "clicked('e')"> <div class="key-inner e">E</div></button>
+        <button class="key" onclick= "clicked('f')"> <div class="key-inner f">F</div></button>
+        <button class="key" onclick= "clicked('g')"> <div class="key-inner g">G</div></button>
+        <button class="key" onclick= "clicked('h')"> <div class="key-inner h">H</div></button>
+        <button class="key" onclick= "clicked('i')"> <div class="key-inner i">I</div></button>
+        <button class="key" onclick= "clicked('j')"> <div class="key-inner j">J</div></button>
+        <button class="key" onclick= "clicked('k')"> <div class="key-inner k">K</div></button>
+        <button class="key" onclick= "clicked('l')"> <div class="key-inner l">L</div></button>
+        <button class="key" onclick= "clicked('m')"> <div class="key-inner m">M</div></button>
+        <button class="key" onclick= "clicked('n')"> <div class="key-inner n">N</div></button>
+        <button class="key" onclick= "clicked('o')"> <div class="key-inner o">O</div></button>
+        <button class="key" onclick= "clicked('p')"> <div class="key-inner p">P</div></button>
+        <button class="key" onclick= "clicked('q')"> <div class="key-inner q">Q</div></button>
+        <button class="key" onclick= "clicked('r')"> <div class="key-inner r">R</div></button>
+        <button class="key" onclick= "clicked('s')"> <div class="key-inner s">S</div></button>
+        <button class="key" onclick= "clicked('t')"> <div class="key-inner t">T</div></button>
+        <button class="key" onclick= "clicked('u')"> <div class="key-inner u">U</div></button>
+        <button class="key" onclick= "clicked('v')"> <div class="key-inner v">V</div></button>
+        <button class="key" onclick= "clicked('w')"> <div class="key-inner w">W</div></button>
+        <button class="key" onclick= "clicked('x')"> <div class="key-inner x">X</div></button>
+        <button class="key" onclick= "clicked('y')"> <div class="key-inner y">Y</div></button>
+        <button class="key" onclick= "clicked('z')"> <div class="key-inner z">Z</div></button>
+    </div>
+    
+</body>
+</html>
